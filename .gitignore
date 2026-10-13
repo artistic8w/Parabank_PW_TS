@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment files (real credentials stay local; the template is committed)
+config/env/.env.qa
+config/env/.env.*
+!config/env/.env.example
+
+# Playwright output
+reports/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Allure output
+allure-results/
+allure-report/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.idea/
+*.swp

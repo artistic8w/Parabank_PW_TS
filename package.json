@@ -1,0 +1,28 @@
+{
+  "name": "parabank_pw_ts",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript automation for ParaBank (E2E, API, security)",
+  "scripts": {
+    "test": "playwright test -c config/playwright.config.ts",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.68.0",
+    "@typescript-eslint/parser": "^8.68.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.11.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.11.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "zod": "^4.5.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0"
+  }
+}
