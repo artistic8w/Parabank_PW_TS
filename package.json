@@ -3,9 +3,22 @@
   "version": "1.0.0",
   "description": "Playwright + TypeScript automation for ParaBank (E2E, API, security)",
   "scripts": {
-    "test": "playwright test -c config/playwright.config.ts",
-    "prepare": "husky"
-  },
+  "test": "playwright test -c config/playwright.config.ts",
+  "test:chromium": "playwright test -c config/playwright.config.ts --project=chromium",
+  "test:headed": "playwright test -c config/playwright.config.ts --project=chromium --headed",
+  "test:debug": "playwright test -c config/playwright.config.ts --project=chromium --debug",
+  "test:ui": "playwright test -c config/playwright.config.ts --ui",
+  "test:smoke": "playwright test -c config/playwright.config.ts --project=chromium --grep @smoke",
+  "test:regression": "playwright test -c config/playwright.config.ts --project=chromium --grep @regression",
+  "test:api": "playwright test -c config/playwright.config.ts --project=api",
+  "test:security": "playwright test -c config/playwright.config.ts --project=chromium --grep @security",
+  "report": "playwright show-report reports/html-report",
+  "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+  "allure:open": "allure open reports/allure-report",
+  "codegen": "playwright codegen https://parabank.parasoft.com/parabank/",
+  "prepare": "husky"
+},
+
   "devDependencies": {
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.4.0",
